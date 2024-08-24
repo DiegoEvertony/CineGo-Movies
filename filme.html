@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="customScrollBar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./src/output.css">
+    <title></title>
+</head>
+<body class="font-inter_sans bg-color-gray text-white box-border relative">
+    <div class="viewTrailer hidden ">
+        
+        <div class="conteinerVideo ">
+            <button class="button">
+                <span class="X"></span>
+                <span class="Y"></span>
+                <div class="close">Fechar</div>
+            </button>
+            <div class="video">
+                <div class="video-area">
+                    <iframe id="iframeYoutube" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="absolute w-full h-full z-20 bg-[#0d0c0fc3]"></div>
+
+    </div>
+     
+    <div class="container01 w-full bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed  z-10">
+        <nav class="nav navBarDesfoque">
+            <div class="menu">
+                <a href="./inicio.html">
+                  <img src="../assets/images/logo-CineGo.svg" width="102px" alt="Logo CineGo!">
+                </a>
+                <button class="hamburger"></button>
+            </div>
+            <div class="linksInput">
+                <ul>
+                  <a href="">
+                    <li class="desativado">Inicio</li>
+                  </a>
+                  <a href="">
+                    <li class="desativado">Filmes</li>
+                  </a>
+                  <a href="">
+                    <li class="desativado">Series</li>
+                  </a>
+                  <a href="">
+                    <li class="desativado">Criança</li>
+                  </a>
+                </ul>
+                <div class="search">
+                  <input class="inputSearch" type="text" placeholder="Procurar...">
+                  <div class="buttonSearch">
+                    <img src="../assets/images/icon-search 2.svg" width="18px" alt="icon-search">
+                  </div>
+                </div>
+            </div>
+          </nav>
+
+        <!-- h-full é pra preencher "container01"-->
+        <div class="containerTitle flex items-center w-full h-full bg-custom-gradient pt-32 pb-10 px-20">
+            <div class="blockTitle  max-w-[550px] flex flex-col gap-4">
+                <h1 class="nameTitle text-5xl font-bold"></h1>
+                <img class="drop-shadow-md" src="" width="291px" alt="">
+                <div class="info flex gap-1">
+                    <div class="flex items-center gap-1">
+                        <img src="assets/images/icon-star.svg" width="14px" alt="">
+                        <span id="notaTitle" class=""></span>
+                    </div>
+                    <span class="">|</span>
+                    <span id="durationTitle" class=""></span>
+                    <span class="">|</span>
+                    <span id="yearTitle" class=""></span>
+                </div>
+                <div class="genres flex flex-wrap gap-3"></div>
+                <!-- <span id="genresTitle" class="text-slate-400"></span> -->
+                <!-- <p id="descTitle" class="w-full limitadorTexto"></p> -->
+
+                <div class="botoes flex gap-5">
+                    <a id="viewTrailer" class="bg-[#4200FF] py-2 px-5 rounded-xl text-sm flex items-center gap-3 btn-donate" href="" target="">
+                        <img src="../assets/images/icon-play.svg" alt="">
+                        <span>Assistir Trailer</span>                       
+                    </a>
+
+
+
+                    <a id="viewDetalhe" class="border py-2 px-5 rounded-xl text-sm flex items-center gap-3 boton-elegante" href="">
+                        <img class="" src="./assets/images/icon-favorito.svg" alt="">
+                        <span>Adicionar no Favorito</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container02 w-full py-6 px-20 hidden">
+        <div class="sinopse">
+            <h2 class="text-xl font-medium mb-4">
+                Sinopse
+            </h2>
+            <p id="descTitle" class="w-full"></p>
+        </div>
+    </div>
+
+    <div class="container03 w-full py-6 px-20">
+        <div class="sinopse">
+            <h2 class="text-xl font-medium mb-4">
+                Elenco Principal
+            </h2>
+
+            <div class="swiper mySwiper2">
+                <div class="elencoPrincipal swiper-wrapper"></div>
+    
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container04 pb-6 pt-5 hidden">
+        <h2 class="text-xl font-medium px-20 mb-5">
+            Filmes similares para você
+        </h2>
+
+        <div class="swiper mySwiper ">
+            <div class="moviesSemelhante swiper-wrapper "></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+
+    <div class="container07 pb-6 pt-5 border-t border-[#1E1E1E] ">
+        <div class="footer flex justify-between px-20 pt-5 pb-24 gap-4">
+            <div class="footerTitle flex flex-col max-w-96">
+                <img src="../assets/images/logo-CineGo.svg" width="102px" alt="Logo CineGo!">
+                <p class="mt-3 mb-7">
+                    A nossa plataforma de catálogo de filmes e séries é confiada por milhões de pessoas e oferece os melhores e mais atualizados conteúdos de entretenimento de todo o mundo.
+                </p>
+                <div class="linkPages flex gap-3">
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Inicio</a>
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Filmes</a>
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Series</a>
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Criança</a>
+                </div>
+            </div>
+
+            <div class="midiasSociais flex flex-col gap-6">
+                <div class="dowloads">
+                    <p class="text-xs font-semibold">
+                        Disponível no
+                    </p>
+                    <div class="imgDowloads flex gap-3 py-1">
+                        <img src="../assets/images/dowload-googlePlay.png" alt="googlePlay">
+                        <img src="../assets/images/dowload-appleStore.png" alt="appleStore">
+                    </div>
+                </div>
+
+                <div class="redesSociais">
+                    <p class="text-xs font-semibold">
+                        Nossas redes sociais
+                    </p>
+                    <div class="imgDowloads flex gap-4 py-1">
+                        <img src="../assets/images/icon-instagram.svg" alt="instagram">
+                        <img src="../assets/images/icon-facebook.svg" alt="facebook">
+                        <img src="../assets/images/icon-x.svg" alt="x">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="termosCopyright flex justify-between px-20">
+            <div class="termos flex gap-5">
+                <a class="font-semibold text-[#909090]" href="#">
+                    Termos e Condições 
+                </a>
+
+                <a class="font-semibold text-[#909090]" href="#">
+                    Política de Privacidade 
+                </a>
+            </div>
+
+            <div class="copyright">
+                <a class="font-semibold text-[#909090]" href="#">
+                    © 2024 DiegoEvertony
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="./js/postFilme.js"></script>
+</body>
+</html>

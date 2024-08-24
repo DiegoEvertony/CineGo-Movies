@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="customScrollBar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./src/output.css">
+    <title>CineGo!</title>
+</head>
+<body class="font-inter_sans bg-color-gray text-white box-border relative">
+    <div class="viewTrailer hidden">
+        
+        <div class="conteinerVideo">
+            <button class="button">
+                <span class="X"></span>
+                <span class="Y"></span>
+                <div class="close">Fechar</div>
+            </button>
+            <div class="video">
+                <div class="video-area">
+                    <iframe id="iframeYoutube" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute w-full h-full z-20 bg-[#0d0c0fc3]"></div>
+    </div>
+
+    <div class="container01 w-full bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed">
+        <nav class="nav navBarDesfoque">
+            <div class="menu">
+                <a href="./inicio.html">
+                  <img src="../assets/images/logo-CineGo.svg" width="102px" alt="Logo CineGo!">
+                </a>
+                <button class="hamburger"></button>
+            </div>
+            <div class="linksInput">
+                <ul>
+                  <a href="">
+                    <li class="ativo">Inicio</li>
+                  </a>
+                  <a href="">
+                    <li class="desativado">Filmes</li>
+                  </a>
+                  <a href="">
+                    <li class="desativado">Series</li>
+                  </a>
+                  <a href="">
+                    <li class="desativado">Criança</li>
+                  </a>
+                </ul>
+                <div class="search">
+                  <input class="inputSearch" type="text" placeholder="Procurar...">
+                  <div class="buttonSearch">
+                    <img src="../assets/images/icon-search 2.svg" width="18px" alt="icon-search">
+                  </div>
+                </div>
+            </div>
+          </nav>
+
+
+        <!-- h-full é pra preencher "container01"-->
+        <div class="ctTitle flex items-center w-full h-full bg-custom-gradient pt-32 pb-10 px-20">
+            <div class="blockTitle flex flex-col gap-4">
+                <img class="drop-shadow-md" src="" width="291px" alt="">
+                <h1 class="nameTitle text-5xl font-bold"></h1>
+                <div class="info">
+                    <span id="durationTitle" class="text-slate-400"></span>
+                    <span id="genresTitle" class="text-slate-400"></span>
+                </div>
+                <p id="descTitle" class="w-full limitadorTexto"></p>
+
+                <div class="botoes flex gap-5">
+                    <a id="viewTrailer" class="bg-[#4200FF] py-2 px-5 rounded-xl text-sm flex items-center gap-3 btn-donate" href="#">
+                        <img src="../assets/images/icon-play.svg" alt="">
+                        <span>Assistir Trailer</span>
+                    </a>
+
+                    <a id="viewDetalhe" class="border py-2 px-5 rounded-xl text-sm flex items-center gap-3 boton-elegante" href="">
+                        <img class="" src="../assets/images/icon-Info.svg" alt="">
+                        <span>Informações</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container02 py-6">
+        <h2 class="text-xl font-medium px-20 mb-5">
+            Em Cartaz Nos Cinemas 
+        </h2>
+
+        <div class="swiper mySwiper">
+            <div class="moviesLancamentos swiper-wrapper"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+
+    </div>
+
+    <div class="container03 py-6">
+        <h2 class="text-xl font-medium px-20 mb-5">
+            Gêneros
+        </h2>
+
+        <div class="swiper mySwiper2">
+            <div class="moviesGeneros swiper-wrapper">
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-red-700 to-red-500 px-14 py-8" href="/genero.html?id=28&acao">
+                    Ação
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-green-600 to-green-400 px-14 py-8" href="/genero.html?id=12&aventura">
+                    Aventura
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-yellow-600 to-yellow-400 px-14 py-8" href="/genero.html?id=35&comedia">
+                    Comédia
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-blue-600 to-blue-400 px-14 py-8" href="/genero.html?id=16&animacao">
+                    Animação
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-rose-600 to-rose-400 px-14 py-8" href="/genero.html?id=10749&romance">
+                    Romance
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-cyan-600 to-cyan-400 px-14 py-8" href="/genero.html?id=10751&familia">
+                    Família
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-violet-700 to-violet-500 px-14 py-8" href="/genero.html?id=878&sci-fi">
+                    Sci-fi
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-rose-400 to-rose-300 px-14 py-8" href="/genero.html?id=18&drama">
+                    Drama
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-neutral-900 to-neutral-700 px-14 py-8" href="/genero.html?id=27&terror">
+                    Terror
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-sky-700 to-sky-500 px-14 py-8" href="/genero.html?id=53&suspense">
+                    Suspense
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-indigo-800 to-indigo-600 px-14 py-8" href="/genero.html?id=14&fantasia">
+                    Fantasia
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-lime-900 to-lime-700 px-14 py-8" href="/genero.html?id=10752&guerra">
+                    Guerra
+                </a>
+                <a class="swiper-slide flex items-center text-xl font-medium rounded-xl bg-gradient-to-r from-gray-500 to-gray-400 px-14 py-8" href="/genero.html?id=80&crime">
+                    Crime
+                </a>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+        </div>
+    </div>
+
+    <div class="container04 pb-6 pt-5">
+        <h2 class="text-xl font-medium px-20 mb-5">
+            Tendências De Agora 
+        </h2>
+
+        <div class="swiper mySwiper">
+            <div class="moviesPopular swiper-wrapper"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+
+    <div class="container05 pb-6 pt-5">
+        <h2 class="text-xl font-medium px-20 mb-5">
+            Top 10 Sucessos De Bilheteria
+        </h2>
+
+        <div class="swiper mySwiper2">
+            <div class="moviesRanking swiper-wrapper"></div>
+
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+
+    <div class="container06 w-full h-full bg-zinc-900 bg-no-repeat bg-center bg-cover mb-6 mt-5">    
+        <div class="containerTitleRec flex items-center w-full h-full bg-custom-gradient3 py-9 px-20">
+            <div class="blockTitleRec  max-w-[380px] flex flex-col gap-4">
+                <div class="titleRec flex flex-col mb-11">
+                    <h2 class="h2 text-3xl font-semibold">
+                        Em destaque no CineGo!
+                    </h2>
+                    <p class="text-xl font-normal">
+                        Recomendação do Dia
+                    </p>
+                </div>
+                <h1 class="nameTitle text-5xl font-bold"></h1>
+                <img class="drop-shadow-md" src="" width="260px" alt="">
+                <div class="info">
+                    <span id="durationTitleRec" class="text-slate-400"></span>
+                    <span id="genresTitleRec" class="text-slate-400"></span>
+                </div>
+                <p id="descTitleRec" class="w-full limitadorTexto2"></p>
+
+                <div class="botoes flex gap-5">
+                    <a id="viewTrailer" class="bg-[#4200FF] py-2 px-5 rounded-xl text-sm flex items-center gap-3 btn-donate" href="">
+                        <img src="../assets/images/icon-play.svg" alt="">
+                        <span>Assistir Trailer</span>
+                    </a>
+
+                    <a id="viewDetalhe" class="border py-2 px-5 rounded-xl text-sm flex items-center gap-3 boton-elegante" href="">
+                        <img class="" src="../assets/images/icon-Info.svg" alt="">
+                        <span>Informações</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container07 pb-6 pt-5">
+        <h2 class="text-xl font-medium px-20 mb-5">
+            Series Mais Votadas 
+        </h2>
+
+        <div class="swiper mySwiper">
+            <div class="seriesPopular swiper-wrapper"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+
+    <div class="container07 pb-6 pt-5 border-t border-[#1E1E1E] ">
+        <div class="footer flex justify-between px-20 pt-5 pb-24 gap-4">
+            <div class="footerTitle flex flex-col max-w-96">
+                <img src="../assets/images/logo-CineGo.svg" width="102px" alt="Logo CineGo!">
+                <p class="mt-3 mb-7">
+                    A nossa plataforma de catálogo de filmes e séries é confiada por milhões de pessoas e oferece os melhores e mais atualizados conteúdos de entretenimento de todo o mundo.
+                </p>
+                <div class="linkPages flex gap-3">
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Inicio</a>
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Filmes</a>
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Series</a>
+                    <a class="font-semibold text-[#909090] hover:text-[#7b00ff]" href="#">Criança</a>
+                </div>
+            </div>
+
+            <div class="midiasSociais flex flex-col gap-6">
+                <div class="dowloads">
+                    <p class="text-xs font-semibold">
+                        Disponível no
+                    </p>
+                    <div class="imgDowloads flex gap-3 py-1">
+                        <img src="../assets/images/dowload-googlePlay.png" alt="googlePlay">
+                        <img src="../assets/images/dowload-appleStore.png" alt="appleStore">
+                    </div>
+                </div>
+
+                <div class="redesSociais">
+                    <p class="text-xs font-semibold">
+                        Nossas redes sociais
+                    </p>
+                    <div class="imgDowloads flex gap-4 py-1">
+                        <img src="../assets/images/icon-instagram.svg" alt="instagram">
+                        <img src="../assets/images/icon-facebook.svg" alt="facebook">
+                        <img src="../assets/images/icon-x.svg" alt="x">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="termosCopyright flex justify-between px-20">
+            <div class="termos flex gap-5">
+                <a class="font-semibold text-[#909090]" href="#">
+                    Termos e Condições 
+                </a>
+
+                <a class="font-semibold text-[#909090]" href="#">
+                    Política de Privacidade 
+                </a>
+            </div>
+
+            <div class="copyright">
+                <a class="font-semibold text-[#909090]" href="#">
+                    © 2024 DiegoEvertony
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
